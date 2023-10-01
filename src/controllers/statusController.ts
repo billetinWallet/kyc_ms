@@ -2,18 +2,18 @@ import Status from "../models/status";
 
 export const getAllStatus = async (req: any, res: any) => {
   const results = await Status.find();
-  res.send({ status: results });
+  res.send(results);
 };
 
 export const createStatus = async (req: any, res: any) => {
   const status = new Status(req.body);
   await status.save();
-  res.send({ status });
+  res.send(status);
 };
 
 export const getStatus = async (req: any, res: any) => {
   const results = await Status.find({ _id: [req.params.id] });
-  res.send({ status: results });
+  res.send(results);
 };
 
 export const updateStatus = async (req: any, res: any) => {

@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  nodeapp:
+    container_name: kyccontainer
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+      
+  mongo:
+    container_name: mongocontainer
+    image: mongo
+    ports:
+      - "27018:27017"
+
+

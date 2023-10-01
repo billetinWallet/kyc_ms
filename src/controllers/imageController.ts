@@ -2,18 +2,18 @@ import Image from "../models/image";
 
 export const getImages = async (req: any, res: any) => {
   const results = await Image.find();
-  res.send({ image: results });
+  res.send(results);
 };
 
 export const createImage = async (req: any, res: any) => {
   const image = new Image(req.body);
   await image.save();
-  res.send({ image });
+  res.send(image);
 };
 
 export const getImage = async (req: any, res: any) => {
   const results = await Image.find({ _id: [req.params.id] });
-  res.send({ image: results });
+  res.send(results);
 };
 
 export const updateImage = async (req: any, res: any) => {

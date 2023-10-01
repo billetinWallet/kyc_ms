@@ -1,0 +1,5 @@
+Como desplegar:
+
+docker-compose build
+
+docker-compose up
