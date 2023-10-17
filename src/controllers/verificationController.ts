@@ -1,6 +1,6 @@
 import Image from "../models/image";
 import Status from "../models/status";
-import axios from "axios";
+//import axios from "axios";
 import {
   getImage,
   getImages,
@@ -30,7 +30,7 @@ export const verification = async (req: any, res: any) => {
 
   // Se le envía una solicitud GraphQL para obtener información del usuario actual, incluido el correo.
   try {
-    const query =
+    /*  const query =
       `
     query {
       userById_ {
@@ -46,13 +46,14 @@ export const verification = async (req: any, res: any) => {
       data: { query },
       headers: { "Content-Type": "application/json" },
     };
+    */
 
-    const response = await axios(options);
+    //const response = await axios(options);
 
-    const userData = response.data;
+    //const userData = response.data;
 
     // userData ahora contiene la información del usuario, incluido el correo.
-    console.log("Información del usuario actual:", userData);
+    //console.log("Información del usuario actual:", userData);
 
     //Se le envia correo al usuario comprobando la verificacion
 
