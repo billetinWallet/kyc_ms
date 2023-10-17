@@ -1,7 +1,7 @@
 import { prop, getModelForClass } from "@typegoose/typegoose";
 
 class Image {
-  @prop({ required: true })
+  @prop({ required: true, unique: true })
   id_user: string;
 
   @prop({ required: true })

@@ -4,6 +4,7 @@ import Status from "./models/status";
 import Image from "./models/image";
 import imageRoutes from "./routes/imageRoutes";
 import statusRoutes from "./routes/statusRoutes";
+import verificationRoutes from "./routes/verificationRoutes";
 
 const app = express();
 app.use(express.json());
@@ -12,6 +13,7 @@ const PORT = 3000;
 
 app.use("/images", imageRoutes);
 app.use("/status", statusRoutes);
+app.use("/verification", verificationRoutes);
 
 async function connectDB() {
   const db = await connect("mongodb://mongo/kyc_db");
